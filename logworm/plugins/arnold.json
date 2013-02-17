@@ -1,0 +1,15 @@
+{
+    "name" : "arnold",
+    "parsers" : {
+        "progress" : {  
+            "mode" : "replace",
+            "regex" : ".* \\| (?P<progress>.*)% done - .*",
+            "return" : "int"
+        },
+        "output" : { 
+            "mode" : "append",
+            "regex" : ".* writing file `(?P<output>.*)\\'$",
+            "return" : "str"
+        }
+    }
+}

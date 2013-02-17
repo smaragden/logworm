@@ -1,0 +1,20 @@
+{
+    "name" : "default",
+    "parsers" : {
+        "info" : {
+            "mode" : "append",
+            "regex" : "(?P<info>.*[Ii][Nn][Ff][Oo].*)}",
+            "return" : "str"
+        },
+        "warning" : {
+            "mode" : "append",
+            "regex" : "(?P<warning>.*[Ww][Aa][Rr][Nn][Ii][Nn][Gg].*)",
+            "return" : "str"
+        },
+        "error" : {
+            "mode" : "append",
+            "regex" : "(?P<error>.*[Ee][Rr]+[Oo][Rr].*)",
+            "return" : "str"
+        }
+    }
+}

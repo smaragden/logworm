@@ -1,0 +1,216 @@
+00:00:00 2922mb         | [mtoa.session] Setting export camera to "persp"
+00:00:00 2922mb         | [mtoa] Exporting scene
+00:00:00 2922mb         | [mtoa] Exporting frame 1.000000
+00:00:00 2922mb         | [mtoa] Exporting Arnold options 'defaultArnoldRenderOptions'
+00:00:00 2922mb         | [mtoa] [maya aiOptions] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | COptionsTranslator <built-in>: CreateArnoldNodes on Maya node defaultArnoldRenderOptions(aiOptions) created arnold node 0x10f1a230: options(options).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on plug defaultArnoldRenderOptions.message and upstream.
+00:00:00 2922mb         | COptionsTranslator <built-in>: Export on Maya node defaultArnoldRenderOptions(aiOptions), Arnold node 0x10f1a230: options(options).
+00:00:00 2922mb         | exporting filter "gaussian"
+00:00:00 2922mb         | CDriverTranslator gaussian: CreateArnoldNodes on Maya node defaultArnoldRenderOptions(aiOptions) created arnold node 0x11135400: defaultArnoldRenderOptions@gaussian_filter(gaussian_filter).
+00:00:00 2922mb         | [mtoa] Custom export of defaultArnoldRenderOptions(<filter>) as Arnold node defaultArnoldRenderOptions@gaussian_filter(gaussian_filter) using translator: gaussian.
+00:00:00 2922mb         | [mtoa] [translator gaussian] Exporting on node defaultArnoldRenderOptions and upstream.
+00:00:00 2922mb         | CDriverTranslator gaussian: Export on Maya node defaultArnoldRenderOptions(aiOptions), Arnold node defaultArnoldRenderOptions@gaussian_filter(gaussian_filter).
+00:00:00 2922mb         | CDriverTranslator gaussian: Export on parameter width
+00:00:00 2922mb         | CDriverTranslator gaussian: Export on parameter name
+00:00:00 2922mb WARNING | display AOV: RGBA
+00:00:00 2922mb         | CDriverTranslator exr: CreateArnoldNodes on Maya node defaultArnoldRenderOptions(aiOptions) created arnold node 0x111357d0: defaultArnoldRenderOptions@driver_exr(driver_exr).
+00:00:00 2922mb         | [mtoa] Custom export of defaultArnoldRenderOptions(<driver>) as Arnold node defaultArnoldRenderOptions@driver_exr(driver_exr) using translator: exr.
+00:00:00 2922mb         | [mtoa] [translator exr] Exporting on node defaultArnoldRenderOptions and upstream.
+00:00:00 2922mb         | CDriverTranslator exr: Export on Maya node defaultArnoldRenderOptions(aiOptions), Arnold node defaultArnoldRenderOptions@driver_exr(driver_exr).
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter filename
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter compression
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter half_precision
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter tiled
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter preserve_layer_name
+00:00:00 2922mb         | CDriverTranslator exr: Export on parameter name
+00:00:00 2922mb         | [mtoa] [aov P] Setting AOV output: filter and driver.
+00:00:00 2922mb         | [mtoa] [aov P] Uses default filter gaussian_filter(gaussian_filter).
+00:00:00 2922mb         | [mtoa] [aov P] prefix '' output line: P RGBA gaussian_filter driver_exr_P
+00:00:00 2922mb         | [mtoa] Exporting dag node perspShape of type camera
+00:00:00 2922mb         | [mtoa] [translator perspective] Exporting on node perspShape and upstream.
+00:00:00 2922mb         | [mtoa] Exporting Arnold options 'defaultArnoldRenderOptions'
+00:00:00 2922mb         | [mtoa] [maya aiOptions] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] Exporting dag node perspShape of type camera
+00:00:00 2922mb         | [mtoa] Exporting dag node groundPlane_transform of type transform
+00:00:00 2922mb         | [mtoa] Dag node groundPlane_transform of type transform ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node groundPlane of type groundPlane
+00:00:00 2922mb         | [mtoa] Dag node groundPlane of type groundPlane ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node Manipulator1 of type textManip2D
+00:00:00 2922mb         | [mtoa] Dag node Manipulator1 of type textManip2D ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node UniversalManip of type xformManip
+00:00:00 2922mb         | [mtoa] Dag node UniversalManip of type xformManip ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node pSphere1 of type transform
+00:00:00 2922mb         | [mtoa] Dag node pSphere1 of type transform ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node pSphereShape1 of type mesh
+00:00:00 2922mb         | [mtoa] [maya mesh] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on node pSphereShape1 and upstream.
+00:00:00 2922mb         | [mtoa] [maya aiStandard] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on plug aiStandard2.outColor and upstream.
+00:00:00 2922mb         | [mtoa] Exporting light linking on pSphereShape1
+00:00:00 2922mb         | [mtoa] Exporting dag node areaLightShape1 of type areaLight
+00:00:00 2922mb         | [mtoa] [maya areaLight] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on node areaLightShape1 and upstream.
+00:00:00 2922mb         | [mtoa] [maya aiLightDecay] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on plug defaultLightDecay.message and upstream.
+00:00:00 2922mb         | [mtoa] Exporting dag node pPlane1 of type transform
+00:00:00 2922mb         | [mtoa] Dag node pPlane1 of type transform ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node pPlaneShape1 of type mesh
+00:00:00 2922mb         | [mtoa] [maya mesh] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on node pPlaneShape1 and upstream.
+00:00:00 2922mb         | [mtoa] [maya aiStandard] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] [translator <built-in>] Exporting on plug aiStandard1.outColor and upstream.
+00:00:00 2922mb         | [mtoa] Exporting light linking on pPlaneShape1
+00:00:00 2922mb         | [mtoa] Exporting dag node areaLightShape1 of type areaLight
+00:00:00 2922mb         | [mtoa] [maya areaLight] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] Exporting dag node areaLight1 of type transform
+00:00:00 2922mb         | [mtoa] Dag node areaLight1 of type transform ignored
+00:00:00 2922mb         | [mtoa] Exporting dag node areaLightShape1 of type areaLight
+00:00:00 2922mb         | [mtoa] [maya areaLight] Using translator <built-in>, provided by <built-in>(<built-in>).
+00:00:00 2922mb         | [mtoa] Exporting dag node CubeCompass of type cubeManip
+00:00:00 2922mb         | [mtoa] Dag node CubeCompass of type cubeManip ignored
+00:00:00 2922mb         |  
+00:00:00 2922mb         | [rlm] connecting to license server on 5053@lisa.madcrew.se ...
+00:00:05 2922mb WARNING | [rlm] could not connect to license server on 5053@lisa.madcrew.se
+00:00:05 2922mb         |  
+00:00:05 2922mb         | there are 1 light and 2 objects:
+00:00:05 2922mb         |  2 polymeshes
+00:00:05 2922mb         |  
+00:00:05 2922mb         | auto-detected 4 threads
+00:00:05 2922mb         | rendering image at 640 x 480, 3 AA samples, 2 GI samples, 1 GI bounces
+00:00:05 2922mb         |  initializing 15 nodes ...
+00:00:05 2922mb         |  node initialization done in 0:00.00
+00:00:05 2922mb         |  creating root object list ...
+00:00:05 2922mb         |   scene bounds: (-6.96905 -1.54744e-15 -6.96905) -> (6.96905 2.00204 6.96905)
+00:00:05 2922mb         |  updating 16 nodes ...
+00:00:05 2922mb         |   areaLightShape1: 1 sample, raytraced (quad_light)
+00:00:05 2922mb         |  node update done in 0:00.00
+00:00:05 2922mb         |  [aov] parsing output statement: "RGBA RGBA gaussian_filter renderview_display"
+00:00:05 2922mb         |  [aov] parsing output statement: "RGBA RGBA gaussian_filter driver_exr"
+00:00:05 2922mb         |  [aov] parsing output statement: "P RGBA gaussian_filter driver_exr_P"
+00:00:05 2922mb         |  [aov] registered driver: "driver_exr_P" (driver_exr)
+00:00:05 2922mb         |  [aov]  * "P" of type RGBA filtered by "gaussian_filter" (gaussian_filter)
+00:00:05 2922mb         |  [aov] registered driver: "renderview_display" (renderview_display)
+00:00:05 2922mb         |  [aov]  * "RGBA" of type RGBA filtered by "gaussian_filter" (gaussian_filter)
+00:00:05 2922mb         |  [aov] registered driver: "driver_exr" (driver_exr)
+00:00:05 2922mb         |  [aov]  * "RGBA" of type RGBA filtered by "gaussian_filter" (gaussian_filter)
+00:00:05 2922mb         |  [aov] done preparing 2 AOVs for 3 outputs to 3 drivers (0 deep AOVs)
+00:00:05 2922mb         |  starting 4 bucket workers of size 64x64 ...
+00:00:05 2930mb         |     0% done - 9 rays/pixel
+00:00:05 2930mb         |     5% done - 9 rays/pixel
+00:00:05 2930mb         |    10% done - 9 rays/pixel
+00:00:05 2930mb         |   [accel] bvh4 done - 0:00.00 - 2 prims, 1 key
+00:00:05 2930mb         |   [accel] bvh4 done - 0:00.00 - 200 prims, 1 key
+00:00:05 2930mb         |   [accel] bvh4 done - 0:00.00 - 760 prims, 1 key
+00:00:05 2930mb         |    15% done - 9 rays/pixel
+00:00:05 2930mb         |    20% done - 9 rays/pixel
+00:00:05 2930mb         |    25% done - 9 rays/pixel
+00:00:06 2930mb         |    30% done - 19 rays/pixel
+00:00:06 2930mb         |    35% done - 18 rays/pixel
+00:00:06 2930mb         |    40% done - 24 rays/pixel
+00:00:07 2930mb         |    45% done - 33 rays/pixel
+00:00:08 2930mb         |    50% done - 28 rays/pixel
+00:00:08 2930mb         |    55% done - 40 rays/pixel
+00:00:09 2930mb         |    60% done - 49 rays/pixel
+00:00:10 2930mb         |    65% done - 35 rays/pixel
+00:00:10 2930mb         |    70% done - 48 rays/pixel
+00:00:11 2930mb         |    75% done - 52 rays/pixel
+00:00:11 2930mb         |    80% done - 50 rays/pixel
+00:00:12 2930mb         |    85% done - 41 rays/pixel
+00:00:12 2930mb         |    90% done - 40 rays/pixel
+00:00:12 2930mb         |    95% done - 49 rays/pixel
+00:00:12 2930mb         |   100% done - 38 rays/pixel
+00:00:12 2930mb         |  bucket workers done in 0:07.69
+00:00:12 2930mb         | render done
+00:00:12 2930mb         | [driver_exr] writing file `/home/fredrik/projects/DIDDI_0001/000_dev/000_010_DIDDI/3d/images/tmp/P/MRRender.P.exr'
+00:00:12 2930mb         | [driver_exr] writing file `/home/fredrik/projects/DIDDI_0001/000_dev/000_010_DIDDI/3d/images/tmp/MRRender.exr'
+00:00:12 2930mb         |  
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | scene creation time:
+00:00:12 2930mb         |  plugin loading               0:00.00
+00:00:12 2930mb         |  system/unaccounted           0:05.04
+00:00:12 2930mb         |  total                        0:05.06  ( 0.36% machine utilization)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | render time:
+00:00:12 2930mb         |  node init                    0:00.00
+00:00:12 2930mb         |  bucket rendering             0:07.69
+00:00:12 2930mb         |   accel. building             0:00.00
+00:00:12 2930mb         |   pixel rendering             0:07.69  (multi-threaded render, this value may not be reliable)
+00:00:12 2930mb         |  system/unaccounted           0:00.73
+00:00:12 2930mb         |  total                        0:07.70  (90.49% machine utilization)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | memory consumed in mb:
+00:00:12 2930mb         |  at startup                   2918.17
+00:00:12 2930mb         |  plugins                         4.26
+00:00:12 2930mb         |  AOV samples                     5.98
+00:00:12 2930mb         |  output buffers                  0.88
+00:00:12 2930mb         |  node overhead                   0.01
+00:00:12 2930mb         |  instance overhead               0.00
+00:00:12 2930mb         |  message passing                 0.01
+00:00:12 2930mb         |  memory pools                    6.19
+00:00:12 2930mb         |  geometry                        0.02
+00:00:12 2930mb         |    polymesh                      0.02
+00:00:12 2930mb         |  accel. structs                  0.03
+00:00:12 2930mb         |  string pool                     0.14 (1040 unique strings, overhead 0.10 mb)
+00:00:12 2930mb         |  texture cache                   0.00
+00:00:12 2930mb         |  unaccounted                    -5.24
+00:00:12 2930mb         |  total peak                   2930.44
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | ray counts:                           (/pixel , /sample) (% total) (avg. hits) (max hits)
+00:00:12 2930mb         |  camera                       2946240 (   9.00,    1.00) ( 21.60%) (     0.39) (       1)
+00:00:12 2930mb         |  shadow                       1460715 (   4.46,    0.50) ( 10.71%) (     0.00) (       0)
+00:00:12 2930mb         |  diffuse                      4743932 (  14.49,    1.61) ( 34.78%) (     0.04) (       1)
+00:00:12 2930mb         |  glossy                       4487749 (  13.71,    1.52) ( 32.90%) (     0.02) (       1)
+00:00:12 2930mb         |  total                       13638636 (  41.66,    4.63) (100.00%) (     0.12) (       1)
+00:00:12 2930mb         |  max depth                          2
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | lighting calculations:                (/pixel , /sample)    secondary (/pixel , /sample)
+00:00:12 2930mb         |  light loops                  2293906 (   7.01,    0.78)       272807 (   0.83,    0.09)
+00:00:12 2930mb         |    cached                     1133241 (   3.46,    0.38)           21 (   0.00,    0.00)
+00:00:12 2930mb         |  indirect diffuse             1160665 (   3.55,    0.39)       101644 (   0.31,    0.03)
+00:00:12 2930mb         |  indirect glossy              1133241 (   3.46,    0.38)            0 (   0.00,    0.00)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | shader calls:                         (/pixel , /sample) (% total)
+00:00:12 2930mb         |  primary                      1433451 (   4.38,    0.49) ( 49.53%)
+00:00:12 2930mb         |  light_filter                 1460715 (   4.46,    0.50) ( 50.47%)
+00:00:12 2930mb         |  total                        2894166 (   8.84,    0.98) (100.00%)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | geometry:                             (% hit ) (instances) (  init mem,  final mem)
+00:00:12 2930mb         |  lists                              1 (100.0%) (        0) (      0.00,       0.00)
+00:00:12 2930mb         |  polymeshes                         2 (100.0%) (        0) (      0.02,       0.02)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | geometric elements:                   (      min) (       avg.) (      max)
+00:00:12 2930mb         |  objects (top level)                2 (        2) (        2.0) (        2)
+00:00:12 2930mb         |  polygons                         500 (      100) (      250.0) (      400)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | triangle tesselation:                 (      min) (       avg.) (      max) (/ element) (% total)
+00:00:12 2930mb         |  polymeshes                       960 (      200) (      480.0) (      760) (     1.92) (100.00%)
+00:00:12 2930mb         |  unique triangles:                960
+00:00:12 2930mb         |  memory use (in mb)              0.02
+00:00:12 2930mb         |    vertices                      0.01
+00:00:12 2930mb         |    vertex indices                0.00
+00:00:12 2930mb         |    polygon base offsets          0.00
+00:00:12 2930mb         |    polygon IDs                   0.00
+00:00:12 2930mb         |    triangulation                 0.00
+00:00:12 2930mb         |    packed normals                0.00
+00:00:12 2930mb         |    normal indices                0.00
+00:00:12 2930mb         |    uv coords                     0.00
+00:00:12 2930mb         |    uv coords idxs                0.00
+00:00:12 2930mb         |    uniform indices               0.00
+00:00:12 2930mb         |  largest polymeshes by triangle count:
+00:00:12 2930mb         |          760 tris -- pSphereShape1
+00:00:12 2930mb         |          200 tris -- pPlaneShape1
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2930mb         | acceleration structures:              (% total)
+00:00:12 2930mb         |  bvh                                3 (100.00%)
+00:00:12 2930mb         |  total                              3 (100.00%)
+00:00:12 2930mb         | -----------------------------------------------------------------------------------------
+00:00:12 2922mb         |  
+00:00:12 2922mb         | releasing resources
+00:00:12 2922mb WARNING |  AtStringPool: out of sync?  could not find entry `' to remove
+00:00:12 2922mb         |  unloading 2 plugins
+00:00:12 2922mb         |   closing mtoa_shaders.so ...
+00:00:12 2920mb         |   closing madShaderLibrary.so ...
+00:00:12 2918mb         |  unloading plugins done
+00:00:12 2918mb WARNING |  [strpool] String "Normals as Color." still has 1 reference
+00:00:12 2918mb         | Arnold shutdown
