@@ -21,12 +21,14 @@ if 'LOGWORM_PLUGINS' in os.environ.keys():
 
 PARSERS = {}
 for plugins_dir in plugins_dirs:
-    for plugin_file in os.listdir(plugins_dir):
-        if plugin_file.endswith('.json'):
-            data_file = os.path.join(plugins_dir,plugin_file)
-            json_data=open(data_file)
-            parser_data = json.load(json_data)
-            json_data.close()
-            PARSERS[parser_data['name']]=parser_data['parsers']
+    if os.path.exists(plugins_dir):
+        for plugin_file in os.listdir(plugins_dir):
+            if plugin_file.endswith('.json'):
+                data_file = os.path.join(plugins_dir,plugin_file)
+                json_data=open(data_file)
+                parser_data = json.load(json_data)
+                json_data.close()
+                PARSERS[parser_data['name']]=parser_data['parsers']
 
 from core import Worm
+__all__=["Worm", "PARSERS"]
