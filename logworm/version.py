@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-
 __title__ = 'logworm'
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 __author__ = 'Fredrik Brannbacka'
 __license__ = 'Apache 2.0'
 __copyright__ = 'Copyright 2013 Fredrik Brannbacka'

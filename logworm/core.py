@@ -17,6 +17,7 @@ import threading
 import logworm
 import re
 
+
 class LogWorm(object):
     class LogPipe(threading.Thread):
         def __init__(self, parent, parsers):
@@ -27,33 +28,33 @@ class LogWorm(object):
             self.fdRead, self.fdWrite = os.pipe()
             self.pipeReader = os.fdopen(self.fdRead)
             self.start()
-    
+
         def fileno(self):
             """Return the write file descriptor of the pipe
             """
             return self.fdWrite
-    
+
         def run(self):
             """Run the thread, logging everything.
             """
             for line in iter(self.pipeReader.readline, ''):
                 for parser in self.parsers:
                     for parser_name in parser.keys():
-                        for key,value in parser[parser_name].iteritems():
+                        for key, value in parser[parser_name].iteritems():
                             val = value['regex'].search(line)
                             if val and val.groups:
                                 for group in val.groups(key):
-                                    self.parent._callback({parser_name : {key : group}},value['mode'])
+                                    self.parent._callback({parser_name: {key: group}}, value['mode'])
                 self.parent._handler(line.strip('\n'))
             self.pipeReader.close()
 
     def __init__(self, parsers, match_callback, line_handler):
-        self.parsers = [self.setupRE(logworm.WORMS[parser], parser) 
-                        for parser in parsers if parser in logworm.WORMSk.keys()]
+        self.parsers = [self.setupRE(logworm.WORMS[parser], parser)
+                        for parser in parsers if parser in logworm.WORMS.keys()]
         self._callback = match_callback
         self._handler = line_handler
         self.logpipe = self.LogPipe(self, self.parsers)
-    
+
     def setupRE(self, parser, name):
         re_parser = {}
         re_parser[name] = {}

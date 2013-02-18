@@ -16,23 +16,26 @@ import os
 import json
 
 plugins_dirs = [os.path.join(os.path.dirname(os.path.realpath(__file__)), "plugins")]
-if 'LOGWORM_PLUGINS' in os.environ.keys():
-    plugins_dirs.append(os.environ['LOGWORM_PLUGINS'].split(':'))
+if 'LOGWORM_WORMS_DIR' in os.environ.keys():
+    plugins_dirs.append(os.environ['LOGWORM_WORMS_DIR'].split(':'))
 
 WORMS = {}
 for plugins_dir in plugins_dirs:
     if os.path.exists(plugins_dir):
         for plugin_file in os.listdir(plugins_dir):
             if plugin_file.endswith('.json'):
-                worm_data = json.load(open(os.path.join(plugins_dir,plugin_file)))
-                WORMS[worm_data['name']]=worm_data['parsers']
+                worm_data = json.load(open(os.path.join(plugins_dir, plugin_file)))
+                WORMS[worm_data['name']] = worm_data['parsers']
+
 
 def registerWorm_from_dict(worm_dict):
-    WORMS[worm_dict['name']]=worm_dict['parsers']
+    WORMS[worm_dict['name']] = worm_dict['parsers']
+
 
 def registerWorm_from_file(worm_file):
     worm_data = json.load(open(worm_file))
-    WORMS[worm_data['name']]=worm_data['parsers']
-    
+    WORMS[worm_data['name']] = worm_data['parsers']
+
 from core import LogWorm
-__all__=["Worm", "PARSERS"]
+
+__all__ = ["LogWorm", "WORMS"]

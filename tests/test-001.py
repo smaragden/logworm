@@ -16,32 +16,36 @@ import subprocess
 import logworm
 
 arnoldWorm = {
-    "name" : "arnold",
-    "parsers" : {
-        "progress" : {  
-            "mode" : "replace",
-            "regex" : ".* \\| (?P<progress>.*)% done - .*",
-            "return" : "int"
+    "name": "arnold",
+    "parsers": {
+        "progress": {
+            "mode": "replace",
+            "regex": ".* \\| (?P<progress>.*)% done - .*",
+            "return": "int"
         },
-        "output" : { 
-            "mode" : "append",
-            "regex" : ".* writing file `(?P<output>.*)\\'$",
-            "return" : "str"
+        "output": {
+            "mode": "append",
+            "regex": ".* writing file `(?P<output>.*)\\'$",
+            "return": "str"
         }
     }
 }
 
+
 def callback(value, mode="append"):
     print mode, value
 
+
 def line(line):
     print line
-    
+
+
 def test():
     logworm.registerWorm_from_dict(arnoldWorm)
     worm = logworm.LogWorm(['default', 'arnold', 'non_existing'], callback, line)
-    subprocess.Popen(['/Users/fredrik/Documents/workspace/logworm/tests/fake_scripts/dummy.sh', 'arnold'], 
+    subprocess.Popen(['/Users/fredrik/Documents/workspace/logworm/tests/fake_scripts/dummy.sh', 'arnold'],
                      stdout=worm.logpipe, stderr=worm.logpipe)
-    
+
+
 if __name__ == '__main__':
     test()
