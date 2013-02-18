@@ -13,7 +13,7 @@
 # limitations under the License.
 
 __title__ = 'logworm'
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 __author__ = 'Fredrik Brannbacka'
 __license__ = 'Apache 2.0'
 __copyright__ = 'Copyright 2013 Fredrik Brannbacka'

@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import os
+import sys
 import threading
 import logworm
 import re
@@ -26,7 +27,7 @@ class LogWorm(object):
             self.parsers = parsers
             self.daemon = False
             self.fdRead, self.fdWrite = os.pipe()
-            self.pipeReader = os.fdopen(self.fdRead)
+            self.pipeReader, self.pipeWriter = os.fdopen(self.fdRead, 'r', 0), os.fdopen(self.fdWrite, 'w', 0)
             self.start()
 
         def fileno(self):
@@ -46,7 +47,9 @@ class LogWorm(object):
                                 for group in val.groups(key):
                                     self.parent._callback({parser_name: {key: group}}, value['mode'])
                 self.parent._handler(line.strip('\n'))
+                sys.stdout.flush()
             self.pipeReader.close()
+
 
     def __init__(self, parsers, match_callback, line_handler):
         self.parsers = [self.setupRE(logworm.WORMS[parser], parser)

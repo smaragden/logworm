@@ -20,12 +20,17 @@ arnoldWorm = {
     "parsers": {
         "progress": {
             "mode": "replace",
-            "regex": ".* \\| (?P<progress>.*)% done - .*",
+            "regex": ".* \| (?P<progress>.*)% done - .*",
+            "return": "int"
+        },
+        "triangles": {
+            "mode": "replace",
+            "regex": ".* \| unique triangles: (?P<triangles>.*)$",
             "return": "int"
         },
         "output": {
             "mode": "append",
-            "regex": ".* writing file `(?P<output>.*)\\'$",
+            "regex": ".* writing file `(?P<output>.*)\'$",
             "return": "str"
         }
     }
