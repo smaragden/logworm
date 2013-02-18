@@ -17,7 +17,7 @@ import threading
 import logworm
 import re
 
-class Worm(object):
+class LogWorm(object):
     class LogPipe(threading.Thread):
         def __init__(self, parent, parsers):
             threading.Thread.__init__(self)
@@ -48,8 +48,8 @@ class Worm(object):
             self.pipeReader.close()
 
     def __init__(self, parsers, match_callback, line_handler):
-        self.parsers = [self.setupRE(logworm.PARSERS[parser], parser) 
-                        for parser in parsers if parser in logworm.PARSERS.keys()]
+        self.parsers = [self.setupRE(logworm.WORMS[parser], parser) 
+                        for parser in parsers if parser in logworm.WORMSk.keys()]
         self._callback = match_callback
         self._handler = line_handler
         self.logpipe = self.LogPipe(self, self.parsers)
